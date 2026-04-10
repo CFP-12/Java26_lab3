@@ -56,4 +56,18 @@ public class Weather {
     }
 
 
+    @Override
+    public String toString() {
+        return "|" +
+            " cityName='" + getCityName() + "'" +
+            ", countryName='" + getCountryName() + "'" +
+            ", latitude='" + getLatitude() + "'" +
+            ", longtitude='" + getLongtitude() + "'" +
+            ", forecastDate='" + getForecastDate() + "'" +
+            ", Weather='" + getForecastWeather() + "'" +
+            ", MinTempC='" + getForcastMinTempC() + "'" +
+            ", MaxTempC='" + getForcastMaxTempC() + "'" +
+            "|";
+    }
+
 }
