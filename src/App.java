@@ -11,7 +11,7 @@ public class App {
         // 사용자에게 검색 조건 입력 요청
         System.out.print("Please enter the condition(cityName, countryName, weather, continent, temperature): ");
         String input = new String(scan.nextLine());
-        
+
         // 입력에 따라 검색 수행
         switch(input){
             case "cityName":
