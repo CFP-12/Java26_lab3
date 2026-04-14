@@ -18,22 +18,32 @@ public class App {
                 System.out.print("Please enter the city name in english: ");
                 String cityname = new String(scan.nextLine());
 
+                Weather[] cityWeathers = finder.findCityName(cityname);
+
                 System.out.println();
                 System.out.println(" ------ Found Data by City ------");
-                for (var weather : finder.findCityName(cityname)) {
+                for (var weather : cityWeathers) {
                     System.out.println(weather);
                 }
+
+                System.out.println();
+                WeatherGraph.printGraph(cityWeathers);
                 break;
             case "countryName":
                 // 국가 이름으로 검색
                 System.out.print("Please enter the country name in english: ");
                 String countryname = new String(scan.nextLine());
 
+                Weather[] countryWeathers = finder.findCountryName(countryname);
+
                 System.out.println();
                 System.out.println(" ------ Found Data by Country ------");
-                for (var weather : finder.findCountryName(countryname)) {
+                for (var weather : countryWeathers) {
                     System.out.println(weather);
                 }
+
+                System.out.println();
+                WeatherGraph.printGraph(countryWeathers);
                 break;
             case "weather":
                 // 날씨 아이콘으로 검색
@@ -42,33 +52,48 @@ public class App {
                 System.out.print(": ");
                 WeatherIcon weathericon = WeatherIcon.fromString(scan.nextLine());
 
+                Weather[] iconWeathers = finder.findIconWeathers(weathericon);
+
                 System.out.println();
                 System.out.println(" ------ Found Data by Weather ------");
-                for (var weather : finder.findIconWeathers(weathericon)) {
+                for (var weather : iconWeathers) {
                     System.out.println(weather);
                 }
+
+                System.out.println();
+                WeatherGraph.printGraph(iconWeathers);
                 break;
             case "continent":
                 // 대륙으로 검색
                 System.out.print("Please enter the continent name in english: ");
                 String continent = new String(scan.nextLine());
 
+                Weather[] continentWeathers = finder.findContinent(continent);
+
                 System.out.println();
                 System.out.println(" ------ Found Data by Continent ------");
-                for (var weather : finder.findContinent(continent)) {
+                for (var weather : continentWeathers) {
                     System.out.println(weather);
                 }
+
+                System.out.println();
+                WeatherGraph.printGraph(continentWeathers);
                 break;
             case "temperature":
                 // 온도로 검색
                 System.out.print("Please enter which temperature you want to search(under 0, over 0): ");
                 String temperature = new String(scan.nextLine());
 
+                Weather[] temperatureWeathers = finder.findTemperature(temperature);
+
                 System.out.println();
                 System.out.println(" ------ Found Data by Temperature ------");
-                for (var weather : finder.findTemperature(temperature)) {
+                for (var weather : temperatureWeathers) {
                     System.out.println(weather);
                 }
+
+                System.out.println();
+                WeatherGraph.printGraph(temperatureWeathers);
                 break;
             default:
                 // 유효하지 않은 입력
