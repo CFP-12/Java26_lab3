@@ -1,4 +1,4 @@
-// 날씨 데이터를 파싱하는 클래스
+// 날씨 데이터를 검색하는 클래스
 public class WeatherFinder {
     private Weather[] data;
 

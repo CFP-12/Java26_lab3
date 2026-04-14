@@ -11,6 +11,7 @@ public class App {
         // 사용자에게 검색 조건 입력 요청
         System.out.print("Please enter the condition(cityName, countryName, weather, continent, temperature): ");
         String input = new String(scan.nextLine());
+        
         // 입력에 따라 검색 수행
         switch(input){
             case "cityName":
@@ -29,6 +30,7 @@ public class App {
                 System.out.println();
                 WeatherGraph.printGraph(cityWeathers);
                 break;
+
             case "countryName":
                 // 국가 이름으로 검색
                 System.out.print("Please enter the country name in english: ");
@@ -45,6 +47,7 @@ public class App {
                 System.out.println();
                 WeatherGraph.printGraph(countryWeathers);
                 break;
+
             case "weather":
                 // 날씨 아이콘으로 검색
                 System.out.println("Please enter weather in english");
@@ -63,6 +66,7 @@ public class App {
                 System.out.println();
                 WeatherGraph.printGraph(iconWeathers);
                 break;
+
             case "continent":
                 // 대륙으로 검색
                 System.out.print("Please enter the continent name in english: ");
@@ -79,6 +83,7 @@ public class App {
                 System.out.println();
                 WeatherGraph.printGraph(continentWeathers);
                 break;
+
             case "temperature":
                 // 온도로 검색
                 System.out.print("Please enter which temperature you want to search(under 0, over 0): ");
