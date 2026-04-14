@@ -34,6 +34,7 @@ public class WeatherData {
         {"Suva", "Fiji", "-18.15", "178.45", "2026-01-28", "Showers", "22", "32"}
     };
 
+    // Weather 객체 배열로 변환하여 반환하는 메서드
     public static String[][] WeatherDatas(){
         return data;
     }
